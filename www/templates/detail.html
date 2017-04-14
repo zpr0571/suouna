@@ -1,0 +1,47 @@
+<ion-view view-title="详情">
+<link rel="stylesheet" href="css/myself/tab-myself.css">
+<link rel="stylesheet" href="css/myself/detail.css">
+<ion-header-bar align-title="center" class="bar-dark">
+	<a href="#/tab/myself" class="item-icon-left">
+			<i class="icon ion-ios-arrow-back"></i>
+		</a>
+  <h1 class="title" style="color:white;">苏欧娜婚纱摄影</h1>
+</ion-header-bar>
+
+	<ion-content class="padding">
+		<div id="cont"></div>
+		<div class="relation">
+			<ul>
+				<li>
+					<span class="ion-ios-telephone-outline"></span>
+					<span>18625991253</span>
+				</li>
+				<li>
+					<span class="ion-email"></span>
+					<span>374395832@qq.com</span>
+				</li>
+				<li>
+					<span class="ion-"></span>
+					<span></span>
+				</li>
+				
+			</ul>
+		</div>
+	</ion-content>
+	
+	<script type="text/javascript"> 
+	var map = new BMap.Map("cont");          // 创建地图实例  
+	map.addControl(new BMap.NavigationControl());   
+
+	var myGeo = new BMap.Geocoder();      
+	// 将地址解析结果显示在地图上，并调整地图视野    
+	myGeo.getPoint("洛阳理工学院开元校区", function(point){      
+	          if (point) {      
+	              map.centerAndZoom(point, 18);      
+	              map.addOverlay(new BMap.Marker(point));      
+	          }      
+	    }, "洛阳市");
+	</script>
+</ion-view> 
+
+

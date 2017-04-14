@@ -1,0 +1,135 @@
+<ion-view view-title="注册" hide-tabs="true" >
+<link rel="stylesheet" href="css/myself/login.css">
+<ion-header-bar align-title="center" class="bar-dark">
+	<a href="#/tab/myself" class="item-icon-left">
+			<i class="icon ion-ios-arrow-back"></i>
+		</a>
+  <h1 class="title" style="color:white;">苏欧娜婚纱摄影</h1>
+</ion-header-bar>
+ <ion-content class="padding" id="padd">
+	<div class="nav-main">
+		<div class="nav-content">
+			<form mothod='post'>
+				<div class="nav-username">
+					<span class="icon ion-person"></span>
+					<input type="text"placeholder="用户名" id="navus" name="uname" methos='post'>
+				</div>
+				<p class="nav-p" id="nav-p1"></p>
+				<div class="nav-password">
+					<span class="ion-key"></span>
+					<input type="password" placeholder="密码" id="navpa" name="password" method='post'>
+				</div>
+				<p class="nav-p" id="nav-p2"></p>
+				<div class="nav-iphone">
+					<span class="ion-iphone"></span>
+					<input type="number" placeholder="手机号" id="navip" name="iphone" method='post'>
+				</div>
+				<p class="nav-p" id="nav-p3"></p>
+
+				<div class="nav-log">
+				已有账号,去登陆!
+				<span><a href="#/tab/login">立即登录</a></span>
+				</div>
+
+				<div class="nav-login" id="butn">提交</div>
+
+			</form>
+		</div>
+	<div>
+<script src="js/myself/jquery-3.1.1.min.js"></script>
+
+</ion-content>
+	<script>
+		$(function(){
+			$('#navus').focus(function(){
+	 			$('#navus').val('');
+	 			$('#nav-p1').html('');
+	 		})
+	 		$('#navus').blur(function(){
+		 		var $navuer = $('#navus').val();
+		 		var $num = $navuer.length;
+		 		var $reg = /^[a-zA-z][a-zA-Z0-9_]{6,16}$/;
+		 		var $patrn=/[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im; 
+		 		if($navuer ==''){
+		 			$('#nav-p1').html('用户名不能为空');
+		 		}else if($num < 6 || $num>16){
+		 			$('#nav-p1').html('用户名应在6-16之间');
+		 		}else if($patrn.test($navuer)){
+		 			$('#nav-p1').html('您输入含有非法数据');
+		 		}
+ 			
+ 			})
+ 			$('#navpa').focus(function(){
+	 			$('#navpa').val('');
+	 			$('#nav-p2').html('');
+	 		})
+	 		$('#navpa').blur(function(){
+		 		var $navuer = $('#navpa').val();
+		 		var $num = $navuer.length;
+		 		var $reg = /^[a-zA-z][a-zA-Z0-9_]{6,16}$/;
+		 		var $patrn=/[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im; 
+		 		if($navuer ==''){
+		 			$('#nav-p2').html('密码不能为空');
+		 		}else if($num < 6 || $num>16){
+		 			$('#nav-p2').html('密码应在6-16之间');
+		 		}else if($patrn.test($navuer)){
+		 			$('#nav-p2').html('您输入含有非法数据');
+		 		}
+ 			})
+ 			$('#navip').focus(function(){
+	 			$('#navip').val('');
+	 			$('#nav-p3').html('');
+	 		})
+	 		$('#navip').blur(function(){
+		 		var $navuer = $('#navip').val();
+		 		var $myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
+		 		if($navuer ==''){
+		 			$('#nav-p3').html('手机号不能为空');
+		 		}else if(!$myreg.test($navuer)){
+		 			$('#nav-p3').html('请输入有效手机号');
+		 		}	
+ 			})
+		})
+		$(function(){
+			$('#butn').click(function(){
+				if ($('#nav-p1').html()==''&&$('#nav-p2').html()==''&&$('#nav-p3').html()=='') {
+					$.ajax({
+							url: 'templates/myself/enroll.php',
+							type: 'POST',
+							data: {'uname':$('#navus').val(),'password':$('#navpa').val(),'iphone':$('#navip').val(),'a':'enroll'} ,
+							dataType:'json',
+							success:function(data){
+								console.log(data);
+								if (data.success==true) {
+									alert('注册成功，请去登录!');
+									window.location.href='#/tab/login';
+								}else{
+									alert('注册失败!');
+								}
+								// var member = eval("(" + data + ")");//包数据解析为json格式
+								// if(member.success == 'true'){
+								// 	flag = true;
+								// 	console.log(flag);
+								// }else if(member.success == 'false'){
+								// 	alert(member.info);
+								// }
+							},
+							error:function(json){
+								// alert('有异常，请刷新后重试...');
+								alert('注册失败!');
+							}
+						})
+				}else{
+					alert('请输入正确信息');
+				}
+			})
+		})
+	</script>	
+</ion-view>
+
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+<ion-view view-title="登录" hide-tabs="true">
+<link rel="stylesheet" href="css/myself/login.css">
+<ion-header-bar align-title="center" class="bar-dark">
+	<a href="#/tab/myself" class="item-icon-left">
+			<i class="icon ion-ios-arrow-back"></i>
+		</a>
+  <h1 class="title" style="color:white;">苏欧娜婚纱摄影</h1>
+</ion-header-bar>
+<ion-content class="padding">
+    
+<div class="nav-main">
+	<div class="nav-content">
+		<form method='post' id="fmorm">
+			<div class="nav-username">
+				<span class="icon ion-person"></span>
+				<input type="text" placeholder="用户名" id="nav-username" method='post'>
+			</div>
+			<p class="nav-lp" id="nav-lp1"></p>
+			<div class="nav-password">
+				<span class="ion-key"></span>
+				<input type="password" placeholder="密码" id="nav-password" method='post'>
+			</div>
+			<p class="nav-lp" id="nav-lp2"></p>
+		</form>
+	</div>
+	<div class="nav-checkbox">
+		<input type="checkbox">记住我
+		<span><a href="#/tab/enroll">立即注册</a></span>
+	</div>
+	<div class="nav-login" id="butnn">登&nbsp;&nbsp;&nbsp;录</div>
+</div>
+</ion-content>
+ <script src="js/myself/jquery-3.1.1.min.js"></script>
+  <script>
+ 	$(function(){
+ 		$('#nav-username').focus(function(){
+ 			$('#nav-username').val('');
+ 			$('#nav-lp1').html('');
+ 		})
+ 		$('#nav-username').blur(function(){
+ 			var $navuer = $('#nav-username').val();
+ 			var $num = $navuer.length;
+ 			var $reg = /^[a-zA-z][a-zA-Z0-9_]{6,16}$/;
+ 			var $patrn=/[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im; 
+ 			if($navuer ==''){
+ 				$('#nav-lp1').html('用户名不能为空');
+ 			}else if($num < 6 || $num>16){
+ 				$('#nav-lp1').html('用户名应在6-16之间');
+ 			}else if($patrn.test($navuer)){
+ 				$('#nav-lp1').html('您输入含有非法数据');
+ 			}
+ 			
+ 		})
+ 		$('#nav-password').focus(function(){
+ 			$('nav-password').val('');
+ 			$('nav-lp2').html('');
+ 		})
+ 		$('#nav-password').blur(function(){
+ 			var $navp = $('#nav-password').val();
+ 			var $num = $navp.length;
+ 			var $reg = /^[a-zA-z][a-zA-Z0-9_]{6,16}$/;
+ 			var $patrn=/[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im;
+ 			if($navp ==''){
+ 				$('#nav-lp2').html('密码不能为空');
+ 			}
+ 		})	
+ 	})
+	$(function(){
+		$('#butnn').click(function(){
+				if($('#nav-username').val()!=''&&$('#nav-password').val()!=''&&$('#nav-lp1').html()==''){
+					$.ajax({
+						url: 'templates/myself/enroll.php',
+						type: 'POST',
+						data: {'uname':$('#nav-username').val(),'password':$('#nav-password').val(),'a':'login'},
+						dataType:'json',
+						success:function(data){
+							console.log(data);
+							if (data.uname) {
+									alert('登录成功!');
+									window.localStorage.setItem('uname',data.uname);
+									window.location.href ="#/tab/myself";
+									$.getScript( 'js/1.js' ,function (){	
+									})
+							}else{
+								alert('登录失败，用户名或密码错误!');
+							}							
+						},
+						error:function(json){
+							alert('登录失败!');
+						}
+					})
+				}		
+		})
+	})
+  </script>
+</ion-view>
+
+

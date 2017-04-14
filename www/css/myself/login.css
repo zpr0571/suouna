@@ -1,0 +1,166 @@
+// *{
+// 	margin: 0;
+// 	padding: 0;
+// 	list-style: none;
+// 	box-sizing:border-box;
+// }
+// a{
+// 	text-decoration: none;
+// }
+// html{
+// 	font-size: 24px;
+// }
+// #padd{
+// 	width: 100%;
+// 	height: 100%；
+// 	padding: 0;
+	
+// }
+.padding{
+	background: url(../../img/video/bg.jpg) repeat/cover;
+	// font-size: 24px;
+}
+.nav-main{
+	width: 100%;
+	height: 100%;	
+}
+.nav-content{
+	width: 100%;
+	height: 120px;
+	margin-top:80px;
+}
+/*注册nav-iphone*/
+.nav-username,.nav-password,.nav-iphone{
+	width: 80%;
+	margin-left: 10%;
+	text-align: center;
+	line-height: 45px;
+	height: 48px;
+	border:2px solid gray;
+	padding: 0;
+	border-radius: 4px;
+	background-color: rgb(255,255,255);
+}
+.nav-username span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+}
+.nav-username input{
+	display: inline-block;
+	width:70%;
+	height: 20px; 
+	font-size: 20px;
+	padding: 0;
+	border-radius: 4px;
+}
+.nav-password span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+}
+.nav-password input{
+	display: inline-block;
+	width:70%;
+	height: 20px;
+	font-size: 20px; 
+	padding: 0;
+	border-radius: 4px;	
+}
+.nav-lp{
+	width: 80%;
+	height: 1.2rem;
+	margin-left: 10%;
+	border-radius: 4px;
+	margin-bottom: 0;
+	line-height: 1.2rem;
+	padding-left: 10px;
+	font-size: 14px;
+
+}
+.nav-checkbox{
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 20px;
+	font-size: 0.6rem;
+}
+.nav-login{
+	width: 80%;
+	margin-left: 10%;
+	height: 48px;
+	text-align: center;
+	line-height: 48px;
+	font-size: 20px;
+	background-color: blue;
+	margin-top: 10px;
+	border-radius: 4px;
+	background: rgb(44,144,176);
+    background: -moz-linear-gradient(top,  rgb(73,187,226) 0%, rgb(44,144,176) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,rgb(44,144,176)));
+    background: -webkit-linear-gradient(top,  rgb(73,187,226) 0%,rgb(44,144,176) 100%);
+    background: -o-linear-gradient(top,  rgb(73,187,226) 0%,rgb(44,144,176) 100%);
+    background: -ms-linear-gradient(top,  rgb(73,187,226) 0%,rgb(44,144,176) 100%);
+    background: linear-gradient(to bottom,  rgb(73,187,226) 0%,rgb(44,144,176) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(73,187,226)', endColorstr='rgb(44,144,176)',GradientType=0 );
+}
+// .bar{
+// 	width: 100%;
+// 	height: 2.65rem;
+// 	padding: 0;
+// 	overflow: hidden;
+// }
+.otem-icon-left{
+	float: left;
+	width: 0;
+	height: 0;
+}
+
+/*注册nav-iphone*/
+
+.nav-iphone span{
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+}
+.nav-iphone input{
+	display: inline-block;
+	width:70%;
+	height: 20px; 
+	font-size: 20px;
+	padding: 0;
+	border-radius: 4px;
+}
+.nav-log{
+	width: 80%;
+	margin-left: 10%;
+	font-size: 0.6rem;
+}
+.nav-log span{
+	margin-left: 20px;
+
+}
+.nav-submit{
+	width: 80%;
+	height: 1.9rem;
+	margin-left: 10%;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 1.9rem
+}
+.nav-submit>button{
+	font-size: 0.8rem;
+	border: 1px solid gray;
+	width: 75px;
+	border-radius: 4px;
+}
+.nav-p{
+	width: 80%;
+	height: 1.2rem;
+	margin-left: 10%;
+	border-radius: 4px;
+	margin-bottom: 0;
+	font-size: 14px;
+	padding-left: 10px;
+	line-height: 1.2rem;
+}
+

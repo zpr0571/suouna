@@ -1,0 +1,28 @@
+.img_box{
+	  background: url('../../img/video/bg.png') repeat center center / cover;
+	}
+.img_box{
+	width:100%;
+	padding-top: 20px;
+	text-align: center;
+}
+.img_box>ul{
+	width:100%;
+}
+.img_box>ul>li{
+	width:100%;
+}
+.img_box>ul>li>img{
+	width:94%;
+	margin: 2% 3% 0 3%;
+}
+.img_box>ul>li:nth-child(1)>img{
+	
+}
+.z_title{
+	text-align: center;
+	font-size: 1.5rem;
+	color: black;
+	font-style: italic;
+	margin: 30px 0 .8rem;
+}

@@ -1,0 +1,88 @@
+// *{
+// 	padding: 0;
+// 	margin: 0;
+// 	text-align: center;
+// 	text-decoration: none;
+// 	list-style: none;
+// 	font-size: 10px;
+// 	box-sizing: border-box;
+// 	scroll-bar-v{display: none;} 
+// }
+.scroll-bar-v{display: none;} 
+#main{
+	padding: 5% 2% 0;
+	background: url(../../img/writing/bg.jpg) repeat center /cover;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+	list-style: none;
+	font-size: 10px;
+	box-sizing: border-box;
+	scroll-bar-v{display: none;} 
+}
+.clear{
+	zoom:1;
+}
+.clear:after{
+	content:""; display:block;clear:both;
+}
+.m_content div{
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 4%;
+	width: 46%;
+	float: left;
+}
+.m_content img{
+	width: 100%;
+	height: 100%;
+}
+.m_content div{
+	position: relative;
+}
+.m_content div span{
+	display: inline-block;
+	background-color: rgba(0,0,0,.5);
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	color: white;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	font-size: 1.5rem;
+}
+.m_header div ul li{
+	width: 30%;
+	height: 50px;
+	float: left;
+	display: inline-block;
+	margin-left: 3%;	
+}
+.m_header div ul li a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	font-size: 1rem;
+	line-height: 45px;
+	color: #000;
+	border: 1px solid black;
+	cursor: pointer;
+	font-size: 1.8rem;
+	border-radius: 5px;
+}
+.d_content {
+	margin-top: 30px;
+}
+.d_content div, .d_content img{
+	width: 100%;
+	margin-top: 5px;
+	height: 100%;
+}
+.z_title{
+	text-align: center;
+	font-size: 1.8rem;
+	color: black;
+	font-style: italic;
+}

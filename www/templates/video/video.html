@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="css/video/video.css">
+<link rel="stylesheet" href="css/video/boot/css/bootstrap.css">
+<link rel="stylesheet" href="css/common.css">
+<ion-view view-title="视频">
+<ion-header-bar class="bar-dark">
+    <a href="#/tab/kepian" class="item-icon-left">
+      <i class="icon ion-ios-arrow-back"></i>
+    </a>
+     <h1 class="title" style="color:white;">苏欧娜婚纱摄影</h1>
+  </ion-header-bar>
+  <ion-content>
+    <div class="vid">
+      <div class="intro" ng-repeat="list in lists">
+        <h3>{{list.title}}</h3>
+        <p>用镜头旅行，用独特的视角打造苏欧娜风格婚纱大片！</p>
+        <p>Travel with a lens, with a unique perspective to create Su Ou style wedding!</p>
+      </div>
+      <div class="vide">
+        <video controls> 
+          <source ng-src="{{list.vedo}}" type="video/mp4"/>
+        </video>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </ion-content>
+  <script src='js/video/video.js'></script>
+</ion-view>

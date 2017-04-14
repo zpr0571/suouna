@@ -1,0 +1,108 @@
+/*a{
+	text-decoration: outline;
+}*/
+.Weddingdress{
+	text-align: center;
+}
+.Weddingdress>span:nth-child(1){
+	color:black;
+	font-size: 1.6rem;
+}
+.Weddingdress>span:nth-child(3){
+	font-size: 1.2rem;
+}
+.Weddingdress>span:nth-child(5){
+	color:gray;
+	font-size: 0.9rem;
+}
+.index{ 
+	background: url(../../img/video/bg.jpg) repeat; 
+	padding:10px;
+	text-align:center;
+	box-sizing: border-box;
+}
+.in-top { 
+	padding-top: 20px;
+	text-align: center;
+}
+.in-title { 
+	font-size: 1.3rem;
+}
+.in-eng { 
+	color: rgb(202,202,202);
+	font-size: 1.3rem;
+}
+.fenlei { 
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+.fenlei>a{
+	display: inline-block;
+	width: 30%;
+	height: 50px;
+	padding:  0 ;
+	font-size:1.8rem;
+	color: black;
+	line-height: 50px;
+	// margin: 0 10%;
+}
+
+a{
+	text-decoration: outline;
+}
+.wcc{
+	background-color: rgb(214,151,84);
+	border-radius: 0.8rem;
+}
+.wd{
+	width:96%;
+	margin-left: 2%;
+}
+.wd ul{
+	width:100%;
+	overflow: hidden;
+}
+.wd ul li{
+	width:50%;
+	float:left;
+	margin-top:2%;
+}
+.wd ul li a{
+	width:100%;
+	margin:0;
+}
+.wd ul li a span i{
+	display: block;
+}
+.wd ul li a img{
+	width:98%;
+/*	height:20rem;*/
+}
+.wd ul li:nth-child(2) a img{
+	margin-left: 2%;
+}
+.fd{
+	width:96%;
+	margin-left: 2%;
+}
+.fd ul{
+	width:100%;
+	overflow: hidden;
+}
+.fd ul li{
+	width:50%;
+	float:left;
+	margin-top:2%;
+}
+.fd ul li a{
+	width:100%;
+	margin:0;
+}
+.fd ul li a img{
+	width:98%;
+	/*height:20rem;*/
+}
+.fd ul li:nth-child(2) a img{
+	margin-left: 2%;
+}s

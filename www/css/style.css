@@ -1,0 +1,40 @@
+  .bar-home { 
+    background:url(../img/主页.png) no-repeat center center / cover;
+    background-size: 40%;
+  }
+  .bar-homel { 
+    background:url(../img/主页1.png) no-repeat center center / cover;
+    background-size: 40%;
+  }
+  .bar-hunli{
+    background:url(../img/婚纱礼服.png) no-repeat center center / cover;
+    background-size: 40%;
+  }
+  .bar-hunlil{
+     background:url(../img/a.png) no-repeat center center / cover;
+     background-size: 40%;
+  }
+  .ion-zuopin{
+    background:url(../img/zuopin.png) no-repeat center center / cover;
+     background-size: 40%;
+  }
+  .ion-zuopinl{
+    background:url(../img/zuopinl.png) no-repeat center center / cover;
+    background-size: 40%;
+  }
+  .ion-kepian{
+  	background:url(../img/视频.png) no-repeat center center / cover;
+    background-size: 40%;
+  }
+  .ion-kepianl{
+    background:url(../img/视频1.png) no-repeat center center / cover;
+    background-size: 40%;
+  }
+  .bar-wd { 
+    background:url(../img/我的1.png) no-repeat center center / cover;
+    background-size: 40%;
+  }
+  .bar-wdl { 
+    background:url(../img/wd1.png) no-repeat center center / cover;
+    background-size: 40%;
+  }
